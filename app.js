@@ -22,4 +22,8 @@ app.use("/api/shipping", shippingRoutes);
 app.use("/api/orders", orderRoutes);
 app.use("/api/auth/admin", adminRoutes);
 
+app.get("/keep-alive", (req, res) => {
+  res.send("✅ Server is alive!");
+});
+
 module.exports = app;
